@@ -17,4 +17,8 @@ defmodule BiggestSlacker.Slack do
     Channels.info(id)[:channel]
   end
 
+  def channel_history(id) do
+    Channels.history(id)
+  end
+
 end
