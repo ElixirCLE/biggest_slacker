@@ -27,7 +27,6 @@ defmodule SlackTest do
     channel_history = Slack.channel_history("C04MYHT8Q")
 
     assert length(channel_history.messages) > 0
-    
   end
 
 end
