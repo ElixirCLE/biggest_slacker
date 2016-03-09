@@ -1,15 +1,16 @@
 defmodule BiggestSlacker.Slack do
+  alias Slackex.{Channels, Users}
 
   def channels do
-    Slackex.Channels.list[:channels]
+    Channels.list[:channels]
   end
 
   def slackers do
-    Slackex.Users.list[:members]
+    Users.list[:members]
   end
 
   def user(id) do
-    Slackex.Users.info(id)[:user]
+    Users.info(id)[:user]
   end
 
 end
