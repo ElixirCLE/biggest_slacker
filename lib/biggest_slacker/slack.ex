@@ -18,7 +18,7 @@ defmodule BiggestSlacker.Slack do
   end
 
   def channel_history(id) do
-    Channels.history(id)
+    Channels.history(id, %{count: 1000})
   end
 
 end
