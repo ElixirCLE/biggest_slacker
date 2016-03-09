@@ -7,7 +7,9 @@ defmodule BiggestSlacker.Mixfile do
      elixir: "~> 1.2",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
-     deps: deps]
+     deps: deps,
+     aliases: aliases
+   ]
   end
 
   # Configuration for the OTP application
@@ -30,5 +32,9 @@ defmodule BiggestSlacker.Mixfile do
     [ {:slackex, "~> 0.0.1"},
       {:mix_test_watch, "~> 0.2", only: :dev}
     ]
+  end
+
+  def aliases do
+    ["w": ["test.watch"]]
   end
 end
