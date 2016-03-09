@@ -1,0 +1,2 @@
+defmodule BiggestSlacker do
+end
