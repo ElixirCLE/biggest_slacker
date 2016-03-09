@@ -8,4 +8,8 @@ defmodule BiggestSlacker.Slack do
     Slackex.Users.list[:members]
   end
 
+  def user(id) do
+    Slackex.Users.info(id)[:user]
+  end
+
 end

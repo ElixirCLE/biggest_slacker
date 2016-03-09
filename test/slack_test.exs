@@ -11,4 +11,10 @@ defmodule SlackTest do
     assert length(Slack.slackers) > 1
   end
 
+  test "accesing a single users info from the slack api" do
+    user = Slack.user("U0CGMTEQ4")
+
+    assert user.name == "daveshah"
+  end
+
 end
