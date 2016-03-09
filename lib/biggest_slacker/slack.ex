@@ -9,7 +9,7 @@ defmodule BiggestSlacker.Slack do
     Users.list[:members]
   end
 
-  def user(id) do
+  def slacker(id) do
     Users.info(id)[:user]
   end
 

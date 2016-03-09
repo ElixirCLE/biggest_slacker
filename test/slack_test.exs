@@ -12,9 +12,9 @@ defmodule SlackTest do
   end
 
   test "accesing a single users info from the slack api" do
-    user = Slack.user("U0CGMTEQ4")
+    slacker = Slack.slacker("U0CGMTEQ4")
 
-    assert user.name == "daveshah"
+    assert slacker.name == "daveshah"
   end
 
   test "accessing a channel by id" do
