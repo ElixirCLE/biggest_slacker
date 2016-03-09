@@ -13,4 +13,8 @@ defmodule BiggestSlacker.Slack do
     Users.info(id)[:user]
   end
 
+  def channel(id) do
+    Channels.info(id)[:channel]
+  end
+
 end

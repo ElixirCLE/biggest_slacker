@@ -17,4 +17,10 @@ defmodule SlackTest do
     assert user.name == "daveshah"
   end
 
+  test "accessing a channel by id" do
+    channel = Slack.channel("C04MYHT8Q")
+
+    assert channel.name == "announcements"
+  end
+
 end
