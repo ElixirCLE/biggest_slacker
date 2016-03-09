@@ -11,10 +11,10 @@ defmodule BiggestSlacker.Mixfile do
   end
 
   # Configuration for the OTP application
-  #
+
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger]]
+    [applications: [:logger, :slackex]]
   end
 
   # Dependencies can be Hex packages:
@@ -27,6 +27,8 @@ defmodule BiggestSlacker.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    [{:slackex, "~> 0.0.1"}]
+    [ {:slackex, "~> 0.0.1"},
+      {:mix_test_watch, "~> 0.2", only: :dev}
+    ]
   end
 end
