@@ -1,7 +1,7 @@
 # BiggestSlacker
 
 BiggestSlacker allows you to get a few statistics from your favorite Slack team :)
-You'll need to obtain a Slack API token first, and then export this as an
+You'll need to [obtain a Slack API token first](https://api.slack.com/), and then export this as an
 environment variable:  
 
 ```
