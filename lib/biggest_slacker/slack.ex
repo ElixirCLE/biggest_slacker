@@ -2,7 +2,7 @@ defmodule BiggestSlacker.Slack do
   alias Slackex.{Channels, Users}
 
   def channels do
-    Channels.list[:channels]
+    Channels.list[:channels] |> Enum.sort(&(&1.num_members > &2.num_members))
   end
 
   def slackers do
