@@ -19,7 +19,7 @@ defmodule BiggestSlacker.Stats do
     channels
     |> Enum.sort(&(&1.num_members > &2.num_members))
     |> Enum.filter(&(&1.is_archived == false))
-    |> Enum.map(&(%{name: &1.name, num_members: &1.num_members}))
+    |> Enum.map(&(%{name: &1.name, num_members: &1.num_members, id: &1.id}))
   end
 
   def users_to_message_counts(list_of_history) do
