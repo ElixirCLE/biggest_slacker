@@ -4,7 +4,7 @@ defmodule BiggestSlacker.Slack do
   @max_count_allowed_per_request 1000
 
   def channels do
-    Channels.list[:channels] |> Enum.sort(&(&1.num_members > &2.num_members))
+    Channels.list[:channels] 
   end
 
   def slackers do
