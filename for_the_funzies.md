@@ -1,5 +1,5 @@
 List rooms by most populated:
-```
+```elixir
 iex(19)> BiggestSlacker.Slack.channels |> BiggestSlacker.Stats.most_populated
 [%{name: "announcements", num_members: 356},
  %{name: "random", num_members: 339}, %{name: "intro", num_members: 336},
@@ -31,4 +31,31 @@ iex(19)> BiggestSlacker.Slack.channels |> BiggestSlacker.Stats.most_populated
  %{name: "clegolang", num_members: 5}, %{name: "meta", num_members: 4},
  %{name: "java", num_members: 3}]
 iex(20)> 
+```
+
+Chattiest slackers:
+```elixir
+iex(20)> BiggestSlacker.Slack.channels |> BiggestSlacker.Stats.top_slackers
+[{"acc", "coop56", 1}, {"akron-women-in-tech", "stacyharrison", 2},
+ {"announcements", "dmpawlowski", 12}, {"chitchat", "ascendantlogic", 24},
+ {"civichackers", "rerooting", 1}, {"cle-tech-breakfasts", "eraserhd", 1},
+ {"cleag", "joya.newman", 1}, {"clec-sharp", "edmistond", 12},
+ {"clefed", "jjbacik", 1}, {}, {"clejs", "fingers", 18},
+ {"clelephpants", "mikestratton", 12}, {"clepy", "dmpawlowski", 8},
+ {"clerb", "soulcutter", 117}, {"cocoaheads", "helengriffinjr", 2},
+ {"code-summit-county", "mikestratton", 2}, {"codemash", "crr", 1},
+ {"coderetreat", "crr", 1}, {"conferences", "rachel.krantz", 14},
+ {"coworking", "eraserhd", 1}, {"devops-cle", "ascendantlogic", 61},
+ {"electronics", "yashdalfthegray", 1}, {"embeddedsystems", "erichankinson", 5},
+ {"erlang", "daveshah", 2}, {"games", "grecar", 1},
+ {"giphyfreeforall", "joelbyler", 25}, {"heavy-metal", "ascendantlogic", 12},
+ {"intro", "onealexharms", 8}, {"ixdacleveland", "davidmead", 5},
+ {"java", "spudfkc", 2}, {"jobs", "glyphrider", 4},
+ {"makerchat", "eraserhd", 3}, {"marketplace", "joelbyler", 1},
+ {"meta", "jonknapp", 3}, {}, {}, {"nodeschool", "rerooting", 1},
+ {"parenting", "mikestratton", 2}, {}, {"railsbridge-cle", "joelbyler", 22},
+ {"random", "ascendantlogic", 40}, {"refreshcleveland", "bcolbow", 3}, {},
+ {"talks", "jonknapp", 5}, {"thatsmyjam", "mikestratton", 2},
+ {"xddcle", "rachel.krantz", 33}]
+iex(21)> 
 ```
